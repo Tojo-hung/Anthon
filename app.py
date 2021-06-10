@@ -5,15 +5,17 @@ import json
 app = Flask(__name__)
 
 def forward():
-   
+   print("forward")
+
 def backward():
-   
+   print("backward")
 def right():
-   
+   print("right")
 def left():
-   
+   print("left")
 def stop():
-   
+   print("stop")
+
 @app.route('/')
 def home():
    return render_template('index.html')
