@@ -28,7 +28,7 @@ def action(direction):
 		backward()
 	if direction == 'right':
 		right()
-   if direction == 'left':
+	if direction == 'left':
 		left()
 	if direction == 'stop':
 		stop()   
