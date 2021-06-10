@@ -1,28 +1,20 @@
 
 document.addEventListener('keydown', function(event) {
   var x = event.key;
-  if (x === "ArrowLeft"){
+  if (x === "ArrowLeft" || x === "a"){
     document.getElementById("Left").style.backgroundColor = "red";
+    $.post( "/postmethod", {
+      direction: "left" 
+    });
+    console.log('left');
   }
-  else if (x == "ArrowRight") {
+  else if (x == "ArrowRight" || x === "d") {
     document.getElementById("Right").style.backgroundColor = "red";
   }
-  else if (x == "ArrowDown") {
+  else if (x == "ArrowDown" || x === "s") {
     document.getElementById("Down").style.backgroundColor = "red";
   }
-  else if (x == "ArrowUp") {
-    document.getElementById("Up").style.backgroundColor = "red";
-  }
-  else if (x === "a"){
-    document.getElementById("Left").style.backgroundColor = "red";
-  }
-  else if (x == "d") {
-    document.getElementById("Right").style.backgroundColor = "red";
-  }
-  else if (x == "s") {
-    document.getElementById("Down").style.backgroundColor = "red";
-  }
-  else if (x == "w") {
+  else if (x == "ArrowUp" || x === "w") {
     document.getElementById("Up").style.backgroundColor = "red";
   }
 });
